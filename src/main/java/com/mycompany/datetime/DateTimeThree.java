@@ -9,10 +9,10 @@ public class DateTimeThree {
 
 		//calculate experience of an employee
 		LocalDate currentDate = LocalDate.now();
-		LocalDate startDate = LocalDate.of(2012, 04, 15);
+		LocalDate startDate = LocalDate.of(1998, 02, 13);
 		
 		Period period = Period.between(startDate, currentDate); //
-		System.out.printf("Total experience is %d years %d months %days", period.getYears(), period.getMonths(), period.getDays());
+		System.out.printf("Total experience is %d years %d months % days ", period.getYears(), period.getMonths(), period.getDays());
 		
 	}
 

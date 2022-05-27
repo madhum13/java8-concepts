@@ -1,4 +1,4 @@
-package com.mycompany.streamfilterpredicate;
+package com.mycompany.streamfilterpredicateoptional;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,6 +13,7 @@ public class StreamOne {
 		List<Integer> numList = new ArrayList<>();
 		numList.add(11);
 		numList.add(12);
+		numList.add(211);
 		numList.add(211);
 		numList.add(121);
 		numList.add(141);
@@ -47,6 +48,17 @@ public class StreamOne {
 		
 		//oddNumList = numList.stream().filter(oddLogic).collect(Collectors.toList());
 	    oddNumList = numList.stream().filter(oddLogic.and(gt50)).collect(Collectors.toList());
+	    System.out.println(oddNumList);
+	    System.out.println("*******************");
+	    oddNumList = numList.stream()
+	    		.filter(oddLogic.and(gt50))
+	    		.peek(e->System.out.println(e))
+	    		.distinct()   //to remove duplicate elements
+	    		//.peek(e->System.out.println(e))
+                .sorted()
+		.collect(Collectors.toList());
+	    System.out.println(oddNumList);
+	
 	}
 	
 }

@@ -22,5 +22,9 @@ Can have default methods
 
 -<Predicate Functional interface
 -<Return boolean
-https 
+https://www.baeldung.com/java-predicate-chain
+
+Map
+-------
+Helps to transform data
 
